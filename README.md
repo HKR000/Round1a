@@ -1,7 +1,9 @@
 📌 Challenge Overview
+
 Round 1A focuses on building the core document understanding engine. The goal is to extract a structured outline (Title, H1, H2, H3 headings with page numbers) from a given PDF document. This will serve as the foundation for the subsequent rounds of the hackathon.
 
 🚀 Solution Approach
+
 Implemented a PDF parsing pipeline that analyzes text blocks, font sizes, and styles to detect document structure.
 
 Uses text hierarchy detection with heuristics + optional lightweight ML-based heading classifier (≤ 200MB).
@@ -11,6 +13,7 @@ Handles multilingual PDFs.
 Outputs a clean JSON format matching the given specification.
 
 🛠️ Technologies and Libraries
+
 Language: Python 3
 
 Libraries:
@@ -38,6 +41,7 @@ docker build --platform linux/amd64 -t pdf-outline-extractor:latest .
 ▶️ Running the Container
 
 Place PDFs in the input folder and run:
+
 
 docker run --rm \
   -v $(pwd)/input:/app/input \
